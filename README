@@ -26,3 +26,5 @@ hewerton.lvieira@gmail.com
 1. **Clonar o Repositório:**
    ```bash
    git clone https://github.com/hewertonLV/projectFrontEnd.git
+2. **Inicializar aplicação**
+   - Utilizar VScode , com extensão Live Server , vai facilitar a inicialização e carregamento do JavaScript.
