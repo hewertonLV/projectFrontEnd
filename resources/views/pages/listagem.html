@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="module"  src="/public/js/dados.js" defer></script>
+
+    <title>Listagem</title>
+</head>
+
+<body>
+    <!------------Menu-------------->
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="./listagem.html">
+                    <span class="icon"><ion-icon name="archive-outline"></ion-icon></span>
+                    <span class="title">Notas Emitidas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="title">Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="file-tray-full-outline"></ion-icon></span>
+                    <span class="title">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="reorder-four-outline"></ion-icon></span>
+                    <span class="title">Orders</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="file-tray-stacked-outline"></ion-icon></span>
+                    <span class="title">Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+                    <span class="title">Accounts</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="title">Tools</span>
+                </a>
+            </li>
+        </ul>
+        <div class="toggle"></div>
+    </div>
+
+    <!------------Header------------>
+    <header id="header">
+    </header>
+
+    <div class="container-page">
+        <div class="row">
+
+            <div class="card card-body" style="background: #f99dbc;">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" style="display: grid;">
+                        <label>Mês de emissão</label>
+                        <select id="emissao">
+                            <option value="" selected></option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6" style="display: grid;">
+                        <label>Mês de cobrança</label>
+                        <select id="cobranca">
+                            <option value="" selected></option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6" style="display: grid;">
+                        <label>Mês de pagamento</label>
+                        <select id="pagamento">
+                            <option value="" selected></option>
+                            <option value="1">Janeiro</option>
+                            <option value="2">Fevereiro</option>
+                            <option value="3">Março</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maio</option>
+                            <option value="6">Junho</option>
+                            <option value="7">Julho</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Setembro</option>
+                            <option value="10">Outubro</option>
+                            <option value="11">Novembro</option>
+                            <option value="12">Dezembro</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6" style="display: grid;">
+                        <label>Status</label>
+                        <select id="status">
+                            <option value="" selected></option>
+                            <option value="1">Emitida</option>
+                            <option value="2">Cobrança feita</option>
+                            <option value="3">Pag. Atrasado</option>
+                            <option value="4">Pag. Realizado</option>
+                        </select>
+                    </div>
+                    <div class="col" style="padding-top: 10px; display: flex; justify-content: end;">
+                        <button type="button" class="btn btn-info" id="btnBuscar">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-body">
+            <h4 class="text-center">Listagem de Dados</h1>
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Emissão</th>
+                        <th>Cobrança</th>
+                        <th>Pagamento</th>
+                        <th>Valor</th>
+                        <th>Nº NF</th>
+                        <th>Nº boleto</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaCorpo"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        let navigation = document.querySelector('.navigation');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function () {
+            navigation.classList.toggle('active')
+
+        }
+    </script>
+
+</body>
+
+</html>

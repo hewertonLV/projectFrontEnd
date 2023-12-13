@@ -1,0 +1,29 @@
+# Teste Frontend
+
+Projeto para praticar conhecimento sobre Frontend.
+
+## Desenvolvedor
+
+**Nome do Desenvolvedor:**
+João Hewerton L V
+
+**Contato:**
+hewerton.lvieira@gmail.com
+
+## Versões das Ferramentas Utilizadas
+
+- Node.js: v14.17.3
+- npm: v6.14.13
+- Bootstrap v4.5.2
+- JQuery v3.5.1
+- HTML5
+- CSS3
+- JavaScript
+- Biblioteca ApexCharts
+
+## Setup
+
+1. **Clonar o Repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/seu-projeto.git
+   cd seu-projeto
